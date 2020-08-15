@@ -1,0 +1,19 @@
+<div *ngFor="let item of items">
+  Name:{{item['name']}}
+  <img [src]="item.imageUrl" >
+  Price:{{item.price}}
+  Quantity:{{item['quantity']}}
+  <button (click)="restaurantService.addItem(item)">
+    Add
+  </button>
+  <button (click)="restaurantService.removeItem(item)">
+    Remove
+  </button>
+
+</div>
+<div>
+Total Items In cart: {{restaurantService.totalItemsInCart()}}
+
+</div>
+
+<button routerLink="orders">Procced to Order Summary</button>
