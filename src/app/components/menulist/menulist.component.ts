@@ -1,6 +1,7 @@
 import { RestaurantService } from './../../services/restaurant.service';
 import { Component, OnInit } from '@angular/core';
 import { FoodItem } from 'src/app/food-item';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-menulist',
